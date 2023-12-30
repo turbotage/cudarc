@@ -15,6 +15,10 @@ fn link_cuda() {
 
     let candidates: Vec<PathBuf> = root_candidates().collect();
 
+    for can in &candidates {
+        print!("{}\n", can.display());
+    }
+
     let toolkit_root = root_candidates()
         .find(|path| path.join("include").join("cuda.h").is_file())
         .unwrap_or_else(|| {

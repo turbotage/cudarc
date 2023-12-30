@@ -24,11 +24,12 @@ keywords = [
 features = ["ci-check", "f16", "cudnn"]
 
 [features]
-default = ["std", "driver", "nvrtc", "cublas", "curand"]
+default = ["std", "driver", "nvrtc", "cublas", "curand", "cufft"]
 nvrtc = []
 driver = ["nvrtc"]
 cublas = ["driver"]
 cublaslt = ["driver"]
+cufft = ["driver"]
 cudnn = ["driver"]
 curand = ["driver"]
 nccl = ["driver"]
